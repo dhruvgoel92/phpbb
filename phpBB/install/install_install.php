@@ -1484,9 +1484,9 @@ class install_install extends module
 			foreach ($this->module_categories[$module_class] as $cat_name => $subs)
 			{
 				$basename = '';
-				if (isset($module_categories_basenames[$cat_name]))
+				if (isset($this->module_categories_basenames[$cat_name]))
 				{
-					$basename = $module_categories_basenames[$cat_name];
+					$basename = $this->module_categories_basenames[$cat_name];
 				}
 				$module_data = array(
 					'module_basename'	=> $basename,
@@ -1518,9 +1518,9 @@ class install_install extends module
 					foreach ($subs as $level2_name)
 					{
 						$basename = '';
-						if (isset($module_categories_basenames[$level2_name]))
+						if (isset($this->module_categories_basenames[$level2_name]))
 						{
-							$basename = $module_categories_basenames[$level2_name];
+							$basename = $this->module_categories_basenames[$level2_name];
 						}
 						$module_data = array(
 							'module_basename'	=> $basename,
