@@ -1177,7 +1177,7 @@ class auth_admin extends \phpbb\auth\auth
 	* Building content array from permission rows with explicit key ordering
 	* used by display_mask()
 	*/
-	function build_permission_array(&$permission_row, &$content_array, &$categories, $key_sort_array)
+	static function build_permission_array(&$permission_row, &$content_array, &$categories, $key_sort_array)
 	{
 		global $user, $phpbb_container;
 

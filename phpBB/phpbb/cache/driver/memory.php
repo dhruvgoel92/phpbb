@@ -152,7 +152,7 @@ abstract class memory extends \phpbb\cache\driver\base
 	/**
 	* Purge cache data
 	*/
-	function purge()
+	static function purge()
 	{
 		// Purge all phpbb cache files
 		$dir = @opendir($this->cache_dir);

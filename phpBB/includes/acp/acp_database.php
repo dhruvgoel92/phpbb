@@ -562,7 +562,7 @@ class base_extractor
 		}
 	}
 
-	function write_end()
+	static function write_end()
 	{
 		static $close;
 
