@@ -32,8 +32,8 @@ abstract class phpbb_functional_search_base extends phpbb_functional_test_case
 		$this->login();
 		$this->admin_login();
 
-		$crawler = self::request('GET', 'adm/index.php?i=acp_search&mode=settings&sid=' . $this->sid);
-		$form = $crawler->selectButton('Submit')->form();
+		$crawler = self::request('GET', 'adm/index.php?i=acp_users&mode=overview&sid=' . $this->sid);
+		/*$form = $crawler->selectButton('Submit')->form();
 		$values = $form->getValues();
 
 		if ($values["config[search_type]"] != $this->search_backend)
@@ -60,7 +60,15 @@ abstract class phpbb_functional_search_base extends phpbb_functional_test_case
 
 		$this->login();
 		$this->admin_login();
-		$this->delete_search_index();
+		$this->delete_search_index();*/
+	}
+
+	public function test_search_backend_2()
+	{
+		$this->login();
+		$this->admin_login();
+
+		$crawler = self::request('GET', 'adm/index.php?i=acp_search&mode=settings&sid=' . $this->sid);
 	}
 
 	protected function create_search_index()
